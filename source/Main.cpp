@@ -366,7 +366,7 @@ static Node * parse_expression(Parser * parser, int min_precedence) {
 	return left;
 }
 
-static Node * parse_pratt(char * source) {
+static Node * parse_tdop(char * source) {
 	Parser p = {
 		.tokens = tokenize(source),
 		.current_token_offset = 0
@@ -439,7 +439,7 @@ static void print_node(Node * node) {
 static void print_usage(char * program_name) {
 	printf("Usage: %s METHOD\n\n"
 			"Options:\n"
-			"\tMETHOD\tone of naive, tree-rewriting, tree-rewriting-complete, or pratt\n\n", program_name);
+			"\tMETHOD\tone of naive, tree-rewriting, tree-rewriting-complete, or tdop\n\n", program_name);
 }
 
 typedef Node * (ParseFn)(char *);
@@ -458,7 +458,7 @@ int main(int argc, char* argv[]) {
 		{"naive", &parse_naive},
 		{"tree-rewriting", &parse_tree_rewriting},
 		{"tree-rewriting-complete", &parse_tree_rewriting_complete},
-		{"pratt", &parse_pratt},
+		{"tdop", &parse_tdop},
 	};
 
 	ParseMethod selected_method = {};
