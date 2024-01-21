@@ -21,8 +21,6 @@
 
 #include <vector>
 #include <cstdio>
-#include <cstdlib>
-
 
 bool cstrings_equal(char * first, char *second) {
 	while (*first && *second) {
