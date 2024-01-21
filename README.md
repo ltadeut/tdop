@@ -9,21 +9,21 @@ You can find the article on https://lucastadeu.com/notes/top-down-operator-prece
 
 ### Linux or macOS
 
-You'll need clang with C++ 17 support installed. If you're running Ubuntu, you
+You'll need GCC with C++ 17 support installed. If you're running Ubuntu, you
 can get it from `apt`.
 
 ```shell
-sudo apt install clang
+sudo apt install gcc
 ```
 
-If you're on macOS, you can get clang through [homebrew](https://brew.sh).
+If you're on macOS, you can get GCC through [homebrew](https://brew.sh).
 
 ```shell
-brew install clang
+brew install gcc
 ```
 
-Once you have clang installed on your machine, run the `./build.sh` script.
-
+Once you have GCC installed on your machine, run the `./build.sh` script.
+clang
 A directory called `build` will be created at the root of this repository. The
 executable will be placed there under the name`PrecedenceParser`.
 
