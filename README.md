@@ -23,7 +23,6 @@ brew install gcc
 ```
 
 Once you have GCC installed on your machine, run the `./build.sh` script.
-clang
 A directory called `build` will be created at the root of this repository. The
 executable will be placed there under the name`PrecedenceParser`.
 
